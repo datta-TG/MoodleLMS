@@ -88,7 +88,7 @@ The following checkmark and the word 'normal' will appear once the Kubernetes Cl
 
 `$ kubectl get ns`
 
-![Screenshot](testmoodle1.png)
+![Screenshot](testmoodle1.PNG)
 
 * Check the namespace _moodle-example_ or the namespace you have specific in namespace, and make sure the pods are running.
 
