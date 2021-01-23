@@ -62,8 +62,24 @@ The following checkmark and the word 'normal' will appear once the Kubernetes Cl
 
 ![Screenshot](moodle1.PNG)
 
-*  A new window opens, select the cluster and put the name you want to the workspace, in this case it will be called _moodle-example_, accept the terms and click on install. You can modify the different installation parameters at the bottom, like controller and spekaers parameters, in our example we will leave them default, you can read more about the parameters [here](https://cloud.ibm.com/catalog/content/moodle#about "here").
+*  A new window opens, select the cluster and put the name you want to the workspace, in this case it will be called _moodle-example_; then, go to the bottom to find the workspace parameters.
+  You can modify the different installation parameters at the bottom. We will leave them by default except for the credentials Moodle uses for its database and its application. You will need the first to access your database console and the second one to access your new Moodle application. You can read more about setting up the parameters [here](https://cloud.ibm.com/catalog/content/moodle#about "here").
 
+Make sure you set up correctly the email and password for the application in the _moodleEmail_ and _moodlePassword_ variables.
+
+![Screenshot](parameters2.PNG)
+
+![Screenshot](parameters1.PNG)
+
+  You can also set up a new database user in the mariadb.auth.username variable. Don't forget to set the password for that user in the mariadb.auth.password variable. The admin user will be root by default, and you can change its password in the mariadb.auth.rootPassword.
+  
+![Screenshot](parameters3.PNG)
+
+![Screenshot](parameters4.PNG)
+
+![Screenshot](parameters4.PNG)
+
+When you're done, accept the terms, and click on Install.
 
 ![Screenshot](moodle2.PNG)
 
@@ -105,5 +121,6 @@ The following checkmark and the word 'normal' will appear once the Kubernetes Cl
 
 ![Screenshot](testmoodle4.PNG)
 
+You have finished the installation and enjoy your new Moodle site by accessing the load balancer's public IP. It is important to note that the VPC selected in the Kubernetes Cluster created should have an Internet Gateway to correctly access the IP. You can also assign a custom domain by modifying the corresponding variable in the Moodle installation parameters.
 You have finished the installation, enjoy!
 
